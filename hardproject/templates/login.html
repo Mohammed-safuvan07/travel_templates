@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login Page</title>
+
+</head>
+<body style="background-color:orange;">
+<form action="login" method="POST">
+    {% csrf_token %}
+    <input  type="text" name="user_name" placeholder="enter ur username"><br><br>
+    <input  type="password" name="password" placeholder="enter ur password"><br><br>
+  <input type="submit">
+</form>
+{% for j in messages %}
+{{j}}
+{% endfor %}
+</body>
+</html>
